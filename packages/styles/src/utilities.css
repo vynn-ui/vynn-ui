@@ -33,3 +33,11 @@
 @utility focus-ring-role {
   box-shadow: var(--role-control-focus);
 }
+
+@utility weight-display {
+  font-weight: var(--display-weight);
+}
+
+@utility weight-body {
+  font-weight: var(--body-weight);
+}
