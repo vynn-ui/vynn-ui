@@ -1,0 +1,15 @@
+{
+  "name": "@vynn/tokens",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Design token source of truth (primitive, semantic, role) for vynn-ui, two themes: classic + neobrutalism.",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    "./css": "./src/index.css"
+  },
+  "files": [
+    "src"
+  ]
+}

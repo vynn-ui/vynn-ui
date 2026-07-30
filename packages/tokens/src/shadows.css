@@ -1,0 +1,15 @@
+[data-theme="classic"] {
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-md: 0 4px 10px rgb(0 0 0 / 0.08);
+  --shadow-lg: 0 10px 24px rgb(0 0 0 / 0.12);
+  --shadow-overlay: 0 20px 40px rgb(0 0 0 / 0.16);
+  --shadow-press: none;
+}
+
+[data-theme="neobrutalism"] {
+  --shadow-sm: 3px 3px 0 0 var(--ink);
+  --shadow-md: 5px 5px 0 0 var(--ink);
+  --shadow-lg: 8px 8px 0 0 var(--ink);
+  --shadow-overlay: 10px 10px 0 0 var(--ink);
+  --shadow-press: 0 0 0 0 var(--ink);
+}

@@ -1,0 +1,29 @@
+:root {
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+}
+
+[data-theme="classic"] {
+  --spacing-btn-padding-x: var(--space-4);
+  --spacing-btn-padding-y: var(--space-2);
+  --spacing-card-padding: var(--space-5);
+  --spacing-input-padding-x: var(--space-3);
+  --spacing-stack-gap: var(--space-3);
+}
+
+[data-theme="neobrutalism"] {
+  --spacing-btn-padding-x: var(--space-5);
+  --spacing-btn-padding-y: var(--space-3);
+  --spacing-card-padding: var(--space-5);
+  --spacing-input-padding-x: var(--space-4);
+  --spacing-stack-gap: var(--space-4);
+}

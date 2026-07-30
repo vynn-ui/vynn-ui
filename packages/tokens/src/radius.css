@@ -1,0 +1,13 @@
+[data-theme="classic"] {
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+}
+
+[data-theme="neobrutalism"] {
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-full: 999px; /* intentional exception: avatars stay round, see readme */
+}

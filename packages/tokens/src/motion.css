@@ -1,0 +1,20 @@
+:root {
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-slow: 320ms;
+}
+
+[data-theme="classic"] {
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --enter-transform: scale(0.98);
+}
+
+[data-theme="neobrutalism"] {
+  --easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --enter-transform: translate(-3px, -3px);
+}
+
+@keyframes blockt-skeleton {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

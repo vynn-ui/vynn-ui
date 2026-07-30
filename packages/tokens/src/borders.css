@@ -1,0 +1,11 @@
+[data-theme="classic"] {
+  --border-width-hairline: 1px;
+  --border-width-default: 1px;
+  --border-width-strong: 2px;
+}
+
+[data-theme="neobrutalism"] {
+  --border-width-hairline: 2px;
+  --border-width-default: 3px;
+  --border-width-strong: 4px;
+}

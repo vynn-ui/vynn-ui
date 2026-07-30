@@ -1,0 +1,132 @@
+/* Primitive palette — shared raw values, both themes alias from here */
+:root {
+  --gray-0: #ffffff;
+  --gray-50: #f8f8f7;
+  --gray-100: #f0f0ef;
+  --gray-200: #e4e4e2;
+  --gray-300: #d1d1ce;
+  --gray-400: #a8a8a3;
+  --gray-500: #7c7c76;
+  --gray-600: #5a5a55;
+  --gray-700: #403f3b;
+  --gray-800: #2a2a27;
+  --gray-900: #1a1a18;
+  --gray-950: #121212;
+
+  --violet-100: #ece6f8;
+  --violet-200: #d3c2ee;
+  --violet-400: #8f6bd6;
+  --violet-500: #6c4ab6;
+  --violet-600: #5a3b9c;
+  --violet-700: #472e7b;
+
+  --yellow-100: #fff6d9;
+  --yellow-300: #ffe38a;
+  --yellow-400: #ffd23f;
+  --yellow-500: #f0b800;
+  --yellow-700: #8a6900;
+
+  --ink: #121212;
+
+  --green-subtle: #e6f4ea;
+  --green-border: #a6d9b5;
+  --green-text: #1e6b34;
+  --green-solid: #2f9e51;
+
+  --amber-subtle: #fef3d9;
+  --amber-border: #f0cf80;
+  --amber-text: #8a5f00;
+  --amber-solid: #d99a00;
+
+  --red-subtle: #fbe8e6;
+  --red-border: #eeb3ac;
+  --red-text: #9c2b1f;
+  --red-solid: #d63f2e;
+
+  --blue-subtle: #e6eefc;
+  --blue-border: #aec7f2;
+  --blue-text: #1f4c9c;
+  --blue-solid: #3568d4;
+}
+
+/* Classic — neutral, calm, violet reserved for primary actions */
+[data-theme="classic"] {
+  --color-bg-page: var(--gray-50);
+  --color-bg-surface: var(--gray-0);
+  --color-bg-subtle: var(--gray-100);
+  --color-bg-inverse: var(--gray-900);
+
+  --color-text-primary: var(--gray-900);
+  --color-text-secondary: var(--gray-600);
+  --color-text-muted: var(--gray-500);
+  --color-text-inverse: var(--gray-0);
+  --color-text-on-accent: var(--gray-0);
+
+  --color-border-default: var(--gray-200);
+  --color-border-strong: var(--gray-300);
+
+  --color-accent: var(--violet-500);
+  --color-accent-hover: var(--violet-600);
+  --color-accent-active: var(--violet-700);
+  --color-accent-subtle: var(--violet-100);
+
+  --color-success-subtle: var(--green-subtle);
+  --color-success-border: var(--green-border);
+  --color-success-text: var(--green-text);
+  --color-success-solid: var(--green-solid);
+  --color-warning-subtle: var(--amber-subtle);
+  --color-warning-border: var(--amber-border);
+  --color-warning-text: var(--amber-text);
+  --color-warning-solid: var(--amber-solid);
+  --color-danger-subtle: var(--red-subtle);
+  --color-danger-border: var(--red-border);
+  --color-danger-text: var(--red-text);
+  --color-danger-solid: var(--red-solid);
+  --color-info-subtle: var(--blue-subtle);
+  --color-info-border: var(--blue-border);
+  --color-info-text: var(--blue-text);
+  --color-info-solid: var(--blue-solid);
+
+  --color-overlay-backdrop: rgb(20 18 15 / 0.4);
+}
+
+/* Neobrutalism — acid yellow + deep violet dominant, hard black lines */
+[data-theme="neobrutalism"] {
+  --color-bg-page: var(--yellow-100);
+  --color-bg-surface: var(--gray-0);
+  --color-bg-subtle: var(--yellow-300);
+  --color-bg-inverse: var(--ink);
+
+  --color-text-primary: var(--ink);
+  --color-text-secondary: var(--gray-800);
+  --color-text-muted: var(--gray-700);
+  --color-text-inverse: var(--gray-0);
+  --color-text-on-accent: var(--gray-0);
+
+  --color-border-default: var(--ink);
+  --color-border-strong: var(--ink);
+
+  --color-accent: var(--violet-500);
+  --color-accent-hover: var(--violet-600);
+  --color-accent-active: var(--violet-700);
+  --color-accent-subtle: var(--yellow-400);
+
+  --color-success-subtle: var(--green-subtle);
+  --color-success-border: var(--ink);
+  --color-success-text: var(--green-text);
+  --color-success-solid: var(--green-solid);
+  --color-warning-subtle: var(--yellow-400);
+  --color-warning-border: var(--ink);
+  --color-warning-text: var(--ink);
+  --color-warning-solid: var(--yellow-500);
+  --color-danger-subtle: var(--red-subtle);
+  --color-danger-border: var(--ink);
+  --color-danger-text: var(--red-text);
+  --color-danger-solid: var(--red-solid);
+  --color-info-subtle: var(--blue-subtle);
+  --color-info-border: var(--ink);
+  --color-info-text: var(--blue-text);
+  --color-info-solid: var(--blue-solid);
+
+  --color-overlay-backdrop: rgb(18 18 18 / 0.55);
+}

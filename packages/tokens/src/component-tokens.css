@@ -1,0 +1,47 @@
+/* Role-based tokens components consume — one place per theme, so every
+   family (Button, Card, Dialog, Input...) inherits consistent treatment
+   without redefining bg/border/radius/shadow per component. */
+
+[data-theme="classic"] {
+  --role-surface-bg: var(--color-bg-surface);
+  --role-surface-border: var(--border-width-default) solid var(--color-border-default);
+  --role-surface-radius: var(--radius-lg);
+  --role-surface-shadow: var(--shadow-sm);
+
+  --role-overlay-border: var(--border-width-default) solid var(--color-border-default);
+  --role-overlay-radius: var(--radius-lg);
+  --role-overlay-shadow: var(--shadow-overlay);
+
+  --role-control-bg: var(--color-bg-surface);
+  --role-control-border: var(--border-width-default) solid var(--color-border-strong);
+  --role-control-radius: var(--radius-md);
+  --role-control-shadow: none;
+  --role-control-focus: 0 0 0 3px var(--color-accent-subtle);
+
+  --role-chip-radius: var(--radius-full);
+  --role-chip-border: var(--border-width-hairline) solid var(--color-border-default);
+
+  --role-press-transform: scale(0.98);
+}
+
+[data-theme="neobrutalism"] {
+  --role-surface-bg: var(--color-bg-surface);
+  --role-surface-border: var(--border-width-default) solid var(--color-border-default);
+  --role-surface-radius: var(--radius-lg);
+  --role-surface-shadow: var(--shadow-md);
+
+  --role-overlay-border: var(--border-width-strong) solid var(--color-border-default);
+  --role-overlay-radius: var(--radius-lg);
+  --role-overlay-shadow: var(--shadow-overlay);
+
+  --role-control-bg: var(--color-bg-surface);
+  --role-control-border: var(--border-width-default) solid var(--color-border-strong);
+  --role-control-radius: var(--radius-md);
+  --role-control-shadow: var(--shadow-sm);
+  --role-control-focus: 0 0 0 3px var(--color-accent-subtle);
+
+  --role-chip-radius: var(--radius-sm);
+  --role-chip-border: var(--border-width-default) solid var(--color-border-default);
+
+  --role-press-transform: translate(3px, 3px);
+}
