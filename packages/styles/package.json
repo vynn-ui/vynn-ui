@@ -1,0 +1,19 @@
+{
+  "name": "@vynn/styles",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Tailwind CSS v4 wiring for vynn-ui design tokens — real utility classes (bg-accent, rounded-control, ...), not arbitrary values.",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    "./globals.css": "./src/globals.css"
+  },
+  "dependencies": {
+    "@vynn/tokens": "workspace:*",
+    "tailwindcss": "^4.0.0"
+  },
+  "files": [
+    "src"
+  ]
+}

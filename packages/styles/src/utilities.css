@@ -1,0 +1,35 @@
+/* Properties that can't collapse into a single Tailwind @theme utility
+   (border width+style pairs, shadows that differ in kind between themes,
+   press transform, label text-transform) — everything else must be a real
+   @theme utility class, not one of these. */
+
+@utility border-control {
+  border-width: var(--border-width-default);
+  border-style: solid;
+}
+
+@utility border-control-strong {
+  border-width: var(--border-width-strong);
+  border-style: solid;
+}
+
+@utility shadow-role {
+  box-shadow: var(--role-surface-shadow);
+}
+
+@utility shadow-overlay-role {
+  box-shadow: var(--role-overlay-shadow);
+}
+
+@utility press-role {
+  transform: var(--role-press-transform);
+}
+
+@utility label-role {
+  text-transform: var(--label-transform);
+  letter-spacing: var(--label-tracking);
+}
+
+@utility focus-ring-role {
+  box-shadow: var(--role-control-focus);
+}
