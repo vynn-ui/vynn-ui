@@ -88,6 +88,23 @@
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
   --font-mono: var(--font-mono);
+
+  --spacing-control-sm: var(--size-control-sm);
+  --spacing-control-md: var(--size-control-md);
+  --spacing-control-lg: var(--size-control-lg);
+  --spacing-icon-sm: var(--icon-sm);
+  --spacing-icon-md: var(--icon-md);
+  --spacing-icon-lg: var(--icon-lg);
+  --spacing-btn-x: var(--spacing-btn-padding-x);
+  --spacing-btn-y: var(--spacing-btn-padding-y);
+  --spacing-card-padding: var(--spacing-card-padding);
+  --spacing-input-x: var(--spacing-input-padding-x);
+  --spacing-stack-gap: var(--spacing-stack-gap);
+
+  --duration-fast: var(--duration-fast);
+  --duration-normal: var(--duration-normal);
+  --duration-slow: var(--duration-slow);
+  --ease-standard: var(--easing-standard);
 }
 
 html,
