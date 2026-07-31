@@ -25,6 +25,7 @@ export * from './overlay/Tooltip';
 export * from './forms/Select';
 export * from './forms/Slider';
 export * from './forms/RadioGroup';
+export * from './navigation/NavigationMenu';
 export * from './navigation/Tabs';
 export * from './overlay/DropdownMenu';
 export * from './overlay/HoverCard';
