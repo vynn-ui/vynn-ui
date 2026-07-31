@@ -41,3 +41,19 @@
 @utility weight-body {
   font-weight: var(--body-weight);
 }
+
+@utility shadow-control {
+  box-shadow: var(--role-control-shadow);
+}
+
+@utility icon-sm {
+  font-size: var(--icon-sm);
+}
+
+@utility icon-md {
+  font-size: var(--icon-md);
+}
+
+@utility icon-lg {
+  font-size: var(--icon-lg);
+}

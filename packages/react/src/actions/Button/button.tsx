@@ -51,7 +51,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(buttonVariants({ variant, size }), className)}
         {...props}
       >
-        {icon ? <i className={`ti ti-${icon}`} aria-hidden="true" /> : null}
+        {icon ? <i className={`ti ti-${icon} icon-sm`} aria-hidden="true" /> : null}
         {children}
       </button>
     );
