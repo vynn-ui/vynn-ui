@@ -6,6 +6,7 @@ export * from './data-display/Card';
 export * from './data-display/Table';
 export * from './feedback/Alert';
 export * from './forms/Checkbox';
+export * from './forms/Combobox';
 export * from './forms/Input';
 export * from './forms/Label';
 export * from './forms/Switch';
