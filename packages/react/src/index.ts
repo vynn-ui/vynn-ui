@@ -24,4 +24,5 @@ export * from './forms/Slider';
 export * from './forms/RadioGroup';
 export * from './navigation/Tabs';
 export * from './overlay/DropdownMenu';
+export * from './overlay/HoverCard';
 export * from './overlay/Popover';
