@@ -7,3 +7,4 @@ export * from './forms/Input';
 export * from './overlay/Dialog';
 export * from './forms/Select';
 export * from './navigation/Tabs';
+export * from './overlay/DropdownMenu';
