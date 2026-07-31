@@ -21,6 +21,7 @@ export * from './overlay/ContextMenu';
 export * from './overlay/Dialog';
 export * from './overlay/Drawer';
 export * from './overlay/Sheet';
+export * from './overlay/Tooltip';
 export * from './forms/Select';
 export * from './forms/Slider';
 export * from './forms/RadioGroup';
