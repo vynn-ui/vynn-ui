@@ -5,3 +5,4 @@ export * from './data-display/Table';
 export * from './feedback/Alert';
 export * from './forms/Input';
 export * from './overlay/Dialog';
+export * from './forms/Select';
