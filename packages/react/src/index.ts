@@ -13,6 +13,7 @@ export * from './forms/Switch';
 export * from './forms/Textarea';
 export * from './overlay/Dialog';
 export * from './forms/Select';
+export * from './forms/Slider';
 export * from './forms/RadioGroup';
 export * from './navigation/Tabs';
 export * from './overlay/DropdownMenu';
