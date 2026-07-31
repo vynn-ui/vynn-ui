@@ -17,6 +17,7 @@ export * from './forms/Switch';
 export * from './forms/Textarea';
 export * from './overlay/AlertDialog';
 export * from './overlay/Dialog';
+export * from './overlay/Drawer';
 export * from './overlay/Sheet';
 export * from './forms/Select';
 export * from './forms/Slider';
