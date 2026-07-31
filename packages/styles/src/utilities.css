@@ -57,3 +57,8 @@
 @utility icon-lg {
   font-size: var(--icon-lg);
 }
+
+@utility border-chip {
+  border-width: var(--chip-border-width);
+  border-style: solid;
+}

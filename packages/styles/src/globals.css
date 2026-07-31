@@ -34,6 +34,17 @@
   --radius-chip: var(--radius-full);
 }
 
+/* Chip border width picks a different source token per theme (hairline in
+   classic, default in neobrutalism) — unlike the :root aliases above, this
+   can't be a single theme-agnostic chain, so it's declared per theme. */
+[data-theme="classic"] {
+  --chip-border-width: var(--border-width-hairline);
+}
+
+[data-theme="neobrutalism"] {
+  --chip-border-width: var(--border-width-default);
+}
+
 /* Stage 2 — map onto Tailwind's @theme namespace (not @theme inline, so
    these stay CSS variables and runtime theme-switch via [data-theme] keeps
    working) so Tailwind generates real utility classes: bg-surface,
