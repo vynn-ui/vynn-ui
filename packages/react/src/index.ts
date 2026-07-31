@@ -15,6 +15,7 @@ export * from './forms/InputOTP';
 export * from './forms/Label';
 export * from './forms/Switch';
 export * from './forms/Textarea';
+export * from './overlay/AlertDialog';
 export * from './overlay/Dialog';
 export * from './forms/Select';
 export * from './forms/Slider';
