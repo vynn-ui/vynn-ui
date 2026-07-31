@@ -8,6 +8,7 @@ export * from './feedback/Alert';
 export * from './forms/Checkbox';
 export * from './forms/Combobox';
 export * from './forms/Input';
+export * from './forms/InputOTP';
 export * from './forms/Label';
 export * from './forms/Switch';
 export * from './forms/Textarea';
