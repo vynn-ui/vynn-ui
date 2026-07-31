@@ -16,6 +16,7 @@ export * from './forms/Label';
 export * from './forms/Switch';
 export * from './forms/Textarea';
 export * from './overlay/AlertDialog';
+export * from './overlay/Command';
 export * from './overlay/ContextMenu';
 export * from './overlay/Dialog';
 export * from './overlay/Drawer';
