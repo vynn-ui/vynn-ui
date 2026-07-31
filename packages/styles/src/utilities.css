@@ -62,3 +62,8 @@
   border-width: var(--chip-border-width);
   border-style: solid;
 }
+
+@utility border-overlay {
+  border-width: var(--overlay-border-width);
+  border-style: solid;
+}

@@ -29,6 +29,8 @@
   --color-info: var(--color-info-solid);
   --color-info-fg: var(--color-info-text);
 
+  --color-overlay: var(--color-overlay-backdrop);
+
   --radius-control: var(--radius-md);
   --radius-surface: var(--radius-lg);
   --radius-chip: var(--radius-full);
@@ -43,6 +45,16 @@
 
 [data-theme="neobrutalism"] {
   --chip-border-width: var(--border-width-default);
+}
+
+/* Overlay border width also picks a different source token per theme
+   (default in classic, strong in neobrutalism). */
+[data-theme="classic"] {
+  --overlay-border-width: var(--border-width-default);
+}
+
+[data-theme="neobrutalism"] {
+  --overlay-border-width: var(--border-width-strong);
 }
 
 /* Stage 2 — map onto Tailwind's @theme namespace (not @theme inline, so
@@ -90,6 +102,8 @@
   --color-info-subtle: var(--color-info-subtle);
   --color-info-border: var(--color-info-border);
   --color-info-fg: var(--color-info-fg);
+
+  --color-overlay: var(--color-overlay);
 
   --radius-control: var(--radius-control);
   --radius-surface: var(--radius-surface);

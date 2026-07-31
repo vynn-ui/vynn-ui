@@ -4,3 +4,4 @@ export * from './data-display/Card';
 export * from './data-display/Table';
 export * from './feedback/Alert';
 export * from './forms/Input';
+export * from './overlay/Dialog';
