@@ -16,6 +16,7 @@ export * from './data-display/Skeleton';
 export * from './data-display/Table';
 export * from './feedback/Alert';
 export * from './forms/Calendar';
+export * from './feedback/Toast';
 export * from './forms/Checkbox';
 export * from './forms/Combobox';
 export * from './forms/DatePicker';
