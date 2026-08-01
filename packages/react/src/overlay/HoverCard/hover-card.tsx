@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { HoverCard as BaseHoverCard } from '@base-ui-components/react/hover-card';
+import { PreviewCard as BaseHoverCard } from '@base-ui-components/react/preview-card';
 import { cn } from '@vynn/utils';
 
+// Base UI names this primitive "PreviewCard" — same hover-anchored-popup shape
+// we're calling HoverCard here (brief §5 naming).
 const HoverCardRoot = BaseHoverCard.Root;
 
 function HoverCardTrigger({ className, ...props }: React.ComponentProps<typeof BaseHoverCard.Trigger>) {

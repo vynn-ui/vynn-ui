@@ -3,8 +3,8 @@ import { RadioGroup as BaseRadioGroup } from '@base-ui-components/react/radio-gr
 import { Radio as BaseRadio } from '@base-ui-components/react/radio';
 import { cn } from '@vynn/utils';
 
-function RadioGroupRoot({ className, ...props }: React.ComponentProps<typeof BaseRadioGroup.Root>) {
-  return <BaseRadioGroup.Root className={cn('flex flex-col gap-2', className)} {...props} />;
+function RadioGroupRoot({ className, ...props }: React.ComponentProps<typeof BaseRadioGroup>) {
+  return <BaseRadioGroup className={cn('flex flex-col gap-2', className)} {...props} />;
 }
 
 function RadioGroupItem({ className, ...props }: React.ComponentProps<typeof BaseRadio.Root>) {
