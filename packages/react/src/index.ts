@@ -4,6 +4,7 @@ export * from './actions/ToggleGroup';
 export * from './data-display/Avatar';
 export * from './data-display/Badge';
 export * from './data-display/Card';
+export * from './data-display/Separator';
 export * from './data-display/Table';
 export * from './feedback/Alert';
 export * from './forms/Calendar';
