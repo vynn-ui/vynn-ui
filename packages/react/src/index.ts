@@ -6,6 +6,7 @@ export * from './data-display/AspectRatio';
 export * from './data-display/Avatar';
 export * from './data-display/Badge';
 export * from './data-display/Card';
+export * from './data-display/Chart';
 export * from './data-display/Collapsible';
 export * from './data-display/DataTable';
 export * from './data-display/Progress';
