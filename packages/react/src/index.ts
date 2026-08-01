@@ -28,6 +28,7 @@ export * from './forms/RadioGroup';
 export * from './navigation/Breadcrumb';
 export * from './navigation/NavigationMenu';
 export * from './navigation/Pagination';
+export * from './navigation/Sidebar';
 export * from './navigation/Tabs';
 export * from './overlay/DropdownMenu';
 export * from './overlay/HoverCard';
