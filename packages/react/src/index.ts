@@ -5,6 +5,7 @@ export * from './data-display/AspectRatio';
 export * from './data-display/Avatar';
 export * from './data-display/Badge';
 export * from './data-display/Card';
+export * from './data-display/Progress';
 export * from './data-display/Separator';
 export * from './data-display/Table';
 export * from './feedback/Alert';
