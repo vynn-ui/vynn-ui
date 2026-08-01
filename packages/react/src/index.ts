@@ -1,6 +1,7 @@
 export * from './actions/Button';
 export * from './actions/Toggle';
 export * from './actions/ToggleGroup';
+export * from './data-display/AspectRatio';
 export * from './data-display/Avatar';
 export * from './data-display/Badge';
 export * from './data-display/Card';
