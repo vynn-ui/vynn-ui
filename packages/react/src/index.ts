@@ -45,3 +45,4 @@ export * from './overlay/DropdownMenu';
 export * from './overlay/HoverCard';
 export * from './overlay/Menubar';
 export * from './overlay/Popover';
+export * from './layout/ScrollArea';
