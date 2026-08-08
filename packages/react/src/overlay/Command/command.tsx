@@ -24,7 +24,7 @@ function CommandPortal(props: React.ComponentProps<typeof BaseDialog.Portal>) {
 }
 
 function CommandBackdrop({ className, ...props }: React.ComponentProps<typeof BaseDialog.Backdrop>) {
-  return <BaseDialog.Backdrop className={cn('fixed inset-0 bg-overlay', className)} {...props} />;
+  return <BaseDialog.Backdrop className={cn('fixed inset-0 bg-backdrop', className)} {...props} />;
 }
 
 function CommandContent({ className, ...props }: React.ComponentProps<typeof BaseDialog.Popup>) {

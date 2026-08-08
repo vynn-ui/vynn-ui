@@ -32,7 +32,7 @@
   --color-info: var(--color-info-solid);
   --color-info-fg: var(--color-info-text);
 
-  --color-overlay: var(--color-overlay-backdrop);
+  --color-backdrop: var(--color-overlay-backdrop);
 
   --radius-control: var(--radius-md);
   --radius-surface: var(--radius-lg);
@@ -106,7 +106,7 @@
   --color-info-border: var(--color-info-border);
   --color-info-fg: var(--color-info-fg);
 
-  --color-overlay: var(--color-overlay);
+  --color-backdrop: var(--color-backdrop);
 
   --radius-control: var(--radius-control);
   --radius-surface: var(--radius-surface);

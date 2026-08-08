@@ -13,7 +13,7 @@ function AlertDialogPortal(props: React.ComponentProps<typeof BaseAlertDialog.Po
 }
 
 function AlertDialogBackdrop({ className, ...props }: React.ComponentProps<typeof BaseAlertDialog.Backdrop>) {
-  return <BaseAlertDialog.Backdrop className={cn('fixed inset-0 bg-overlay', className)} {...props} />;
+  return <BaseAlertDialog.Backdrop className={cn('fixed inset-0 bg-backdrop', className)} {...props} />;
 }
 
 function AlertDialogContent({ className, ...props }: React.ComponentProps<typeof BaseAlertDialog.Popup>) {

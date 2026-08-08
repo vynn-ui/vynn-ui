@@ -14,7 +14,7 @@ function SheetPortal(props: React.ComponentProps<typeof BaseDialog.Portal>) {
 }
 
 function SheetBackdrop({ className, ...props }: React.ComponentProps<typeof BaseDialog.Backdrop>) {
-  return <BaseDialog.Backdrop className={cn('fixed inset-0 bg-overlay', className)} {...props} />;
+  return <BaseDialog.Backdrop className={cn('fixed inset-0 bg-backdrop', className)} {...props} />;
 }
 
 const sheetContentVariants = cva(
