@@ -73,17 +73,20 @@ export const Calendar = React.forwardRef<HTMLDivElement, CalendarProps>(
             const date = d ? new Date(year, month, d) : null;
             const isSelected = date && selected && isSameDay(date, selected);
             return (
-              <div
+              <button
                 key={i}
+                type="button"
+                disabled={!d}
+                aria-selected={isSelected ? 'true' : undefined}
                 onClick={() => date && onSelect?.(date)}
                 className={cn(
-                  'h-[30px] flex items-center justify-center text-sm rounded-sm',
-                  d ? 'cursor-pointer' : 'cursor-default',
+                  'h-[30px] flex items-center justify-center text-sm rounded-sm outline-none focus-visible:focus-ring-role',
+                  d ? 'cursor-pointer' : 'cursor-default invisible',
                   isSelected ? 'bg-accent text-on-accent' : d ? 'text-ink hover:bg-subtle' : ''
                 )}
               >
                 {d ?? ''}
-              </div>
+              </button>
             );
           })}
         </div>
