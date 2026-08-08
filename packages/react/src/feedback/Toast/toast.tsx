@@ -2,8 +2,9 @@ import * as React from 'react';
 import { Toast as BaseToast } from '@base-ui-components/react/toast';
 import { cn } from '@vynn/utils';
 
-// Base UI has a stable Toast primitive (Provider/Viewport/Root/Title/Description/Close
-// + useToastManager) — wrapped directly per brief §11.6, no custom fallback needed.
+// Base UI's Toast is imperative: toasts are created via useToastManager().add(...)
+// and Toast.Root requires the resulting `toast` object as a prop (it reads internal
+// positioning/transition state from it) — it can't be statically composed like Dialog.
 export type ToastTone = 'default' | 'success' | 'danger';
 
 const ToastContext = React.createContext<ToastTone>('default');
@@ -35,10 +36,12 @@ export interface ToastRootProps extends React.ComponentProps<typeof BaseToast.Ro
   tone?: ToastTone;
 }
 
-function ToastRoot({ className, tone = 'default', children, ...props }: ToastRootProps) {
+function ToastRoot({ className, tone, toast, children, ...props }: ToastRootProps) {
+  const resolvedTone = tone ?? (toast.type as ToastTone | undefined) ?? 'default';
   return (
-    <ToastContext.Provider value={tone}>
+    <ToastContext.Provider value={resolvedTone}>
       <BaseToast.Root
+        toast={toast}
         className={cn(
           'flex items-start gap-3 w-[320px] px-4 py-3 font-sans',
           'bg-surface border-overlay border-border rounded-surface shadow-overlay-role',
@@ -88,6 +91,31 @@ function ToastClose({ className, ...props }: React.ComponentProps<typeof BaseToa
   );
 }
 
+// useToastManager is a member of the Toast namespace object, not a separate
+// top-level export.
+export const useToastManager = BaseToast.useToastManager;
+
+// Convenience: renders the active toast list with our default chrome. Consumers
+// who need custom per-toast layout can map useToastManager().toasts themselves
+// and use Toast.Root/Icon/Content/Title/Description/Close directly instead.
+function ToastList() {
+  const { toasts } = useToastManager();
+  return (
+    <>
+      {toasts.map((toast) => (
+        <ToastRoot key={toast.id} toast={toast}>
+          <ToastIcon />
+          <ToastContent>
+            <ToastTitle />
+            <ToastDescription />
+          </ToastContent>
+          <ToastClose />
+        </ToastRoot>
+      ))}
+    </>
+  );
+}
+
 export const Toast = {
   Provider: ToastProvider,
   Viewport: ToastViewport,
@@ -97,6 +125,5 @@ export const Toast = {
   Title: ToastTitle,
   Description: ToastDescription,
   Close: ToastClose,
+  List: ToastList,
 };
-
-export { useToastManager } from '@base-ui-components/react/toast';

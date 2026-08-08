@@ -19,6 +19,7 @@ function ToastDemo() {
         toastManager.add({
           title: 'Changes saved',
           description: 'Your profile has been updated.',
+          type: 'success',
         })
       }
     >
@@ -32,14 +33,7 @@ export const Default: Story = {
     <Toast.Provider>
       <ToastDemo />
       <Toast.Viewport>
-        <Toast.Root tone="success">
-          <Toast.Icon />
-          <Toast.Content>
-            <Toast.Title>Changes saved</Toast.Title>
-            <Toast.Description>Your profile has been updated.</Toast.Description>
-          </Toast.Content>
-          <Toast.Close />
-        </Toast.Root>
+        <Toast.List />
       </Toast.Viewport>
     </Toast.Provider>
   ),
