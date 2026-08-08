@@ -32,7 +32,7 @@ export function Chart({ type = 'bar', data, className, ...props }: ChartProps) {
     ]);
     const path = pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
     return (
-      <svg width={w} height={h} className={cn('font-sans', className)} {...props}>
+      <svg width={w} height={h} className={cn('font-sans', className)} {...(props as React.SVGProps<SVGSVGElement>)}>
         <path d={path} fill="none" stroke="var(--color-accent)" strokeWidth={2} />
         {pts.map((p, i) => (
           <circle key={i} cx={p[0]} cy={p[1]} r={3} fill="var(--color-accent)" />
@@ -67,7 +67,7 @@ export function Chart({ type = 'bar', data, className, ...props }: ChartProps) {
       );
     });
     return (
-      <svg width={120} height={120} className={cn('font-sans', className)} {...props}>
+      <svg width={120} height={120} className={cn('font-sans', className)} {...(props as React.SVGProps<SVGSVGElement>)}>
         {slices}
       </svg>
     );
