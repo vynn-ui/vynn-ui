@@ -1,0 +1,41 @@
+---
+title: Introduction
+description: What vynn-ui is and how the two themes work.
+---
+
+vynn-ui is a React component library built on [Base UI](https://base-ui.com) primitives, shipped
+in two complete themes — **Classic** and **Neobrutalism** — that share one token system rather
+than being palette swaps of each other.
+
+Every component reads its styling through four layers of tokens: primitive values → semantic
+aliases → role tokens → the component itself. A component never reaches past its role token, so
+retheming never means touching component code.
+
+## What "two themes" actually means
+
+Classic is soft: rounded corners, subtle 1px borders, quiet drop shadows, Inter for body text.
+Neobrutalism is hard: square corners, 3–4px solid-ink borders, an offset hard shadow that
+flattens on press, Space Grotesk, and uppercase labels. Both read the exact same component API —
+switching theme is one `data-theme` attribute on the page root, nothing in your component tree
+changes.
+
+<Cards>
+  <Card title="Getting started" href="/docs/getting-started">
+    Install the package and wire up theming in a real app.
+  </Card>
+  <Card title="Browse in Storybook" href={process.env.NEXT_PUBLIC_STORYBOOK_URL ?? 'http://localhost:6006'}>
+    Every component, every variant, both themes — click through them live.
+  </Card>
+</Cards>
+
+## Categories
+
+| Category | Components |
+| --- | --- |
+| [Actions](/docs/actions) | Button, Toggle, ToggleGroup |
+| [Data Display](/docs/data-display) | Accordion, AspectRatio, Avatar, Badge, Card, Carousel, Chart, Collapsible, DataTable, Progress, Separator, Skeleton, Table |
+| [Feedback](/docs/feedback) | Alert, Toast |
+| [Forms](/docs/forms) | Calendar, Checkbox, Combobox, DatePicker, Form, Input, InputOTP, Label, RadioGroup, Select, Slider, Switch, Textarea |
+| [Layout](/docs/layout) | Resizable, ScrollArea |
+| [Navigation](/docs/navigation) | Breadcrumb, NavigationMenu, Pagination, Sidebar, Tabs |
+| [Overlay](/docs/overlay) | AlertDialog, Command, ContextMenu, Dialog, Drawer, DropdownMenu, HoverCard, Menubar, Popover, Sheet, Tooltip |

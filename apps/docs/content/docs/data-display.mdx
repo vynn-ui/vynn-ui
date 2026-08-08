@@ -1,0 +1,71 @@
+---
+title: Data Display
+description: Accordion, AspectRatio, Avatar, Badge, Card, Carousel, Chart, Collapsible, DataTable, Progress, Separator, Skeleton, Table.
+---
+
+## Card
+
+Compound: `Card.Root`, `Card.Header`, `Card.Title`, `Card.Description`, `Card.Content`,
+`Card.Footer`. Plain building blocks, not a Base UI wrapper — compose them directly.
+
+<div className="max-w-sm my-4">
+  <UICardRoot>
+    <UICardHeader>
+      <UICardTitle>Plan Sync</UICardTitle>
+      <UICardDescription>Changes save to the cloud automatically.</UICardDescription>
+    </UICardHeader>
+  </UICardRoot>
+</div>
+
+```tsx
+import { Card } from '@vynn/ui';
+
+<Card.Root>
+  <Card.Header>
+    <Card.Title>Plan Sync</Card.Title>
+    <Card.Description>Changes save to the cloud automatically.</Card.Description>
+  </Card.Header>
+  <Card.Content>Detail goes here.</Card.Content>
+  <Card.Footer>{/* actions */}</Card.Footer>
+</Card.Root>;
+```
+
+## Badge
+
+Single component. `tone`: `neutral` / `accent` / `success` / `warning` / `danger` / `info`.
+
+<div className="flex gap-2 my-4">
+  <Badge tone="neutral">Neutral</Badge>
+  <Badge tone="success">Success</Badge>
+  <Badge tone="danger">Danger</Badge>
+</div>
+
+## Accordion
+
+Wraps Base UI's Accordion 1:1: `Accordion.Root`, `Accordion.Item`, `Accordion.Header`,
+`Accordion.Trigger`, `Accordion.Panel`.
+
+## Avatar
+
+Single component. Falls back to initials when no `src` loads.
+
+## AspectRatio
+
+Custom (no Base UI primitive exists for this) — a plain div locking `aspect-ratio` via inline
+style.
+
+## Carousel, Chart, DataTable
+
+All three are fully custom builds — no Base UI primitive to wrap. Chart supports `type="bar" |
+"line" | "pie"`. These get the least automated test coverage of the library; check them
+carefully in Storybook before relying on them.
+
+## Collapsible
+
+Single show/hide panel — the two-item-minimum-free version of Accordion. Wraps Base UI's
+Collapsible 1:1.
+
+## Progress, Separator, Skeleton, Table
+
+Straightforward single or lightly-compound components. Table is plain semantic
+`<table>`/`<thead>`/`<tbody>` styling, not a data-grid — see DataTable for sorting/pagination.

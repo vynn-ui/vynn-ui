@@ -1,0 +1,47 @@
+---
+title: Actions
+description: Button, Toggle, ToggleGroup.
+---
+
+## Button
+
+Single component, six variants: `primary`, `secondary`, `outline`, `ghost`, `destructive`,
+`link`. Sizes via `size` (`sm` / `md` / `lg`).
+
+<div className="flex gap-2 my-4">
+  <Button variant="primary">Primary</Button>
+  <Button variant="outline">Outline</Button>
+  <Button variant="ghost">Ghost</Button>
+  <Button variant="destructive">Destructive</Button>
+</div>
+
+```tsx
+import { Button } from '@vynn/ui';
+
+<Button variant="primary" size="md">
+  Save changes
+</Button>;
+```
+
+## Toggle
+
+A single pressable button that tracks its own boolean pressed state (`role="button"` with
+`aria-pressed`/`data-state`, from Base UI's Toggle).
+
+```tsx
+import { Toggle } from '@vynn/ui';
+
+<Toggle aria-label="Bold">B</Toggle>;
+```
+
+## ToggleGroup
+
+A row of Toggles sharing single- or multi-select state. `type="single"` or `type="multiple"`.
+
+```tsx
+import { ToggleGroup } from '@vynn/ui';
+
+<ToggleGroup type="single" defaultValue="left">
+  {/* items */}
+</ToggleGroup>;
+```

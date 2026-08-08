@@ -1,0 +1,7 @@
+/* @vynn/styles/globals.css already does @import "tailwindcss" as its first
+   statement — must stay the literal first line here too (CSS requires all
+   @import rules to precede everything else once the bundler inlines them). */
+@import '@vynn/styles/globals.css';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+@source '../**/*.{ts,tsx,mdx}';

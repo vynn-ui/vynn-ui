@@ -1,0 +1,45 @@
+---
+title: Getting Started
+description: Install vynn-ui and wire up theming in a real app.
+---
+
+## Install
+
+```package-install
+npm install @vynn/ui @vynn/styles
+```
+
+## Import the styles once
+
+`@vynn/styles` ships the full Tailwind v4 token wiring for both themes. Import it once, at your
+app root:
+
+```ts title="app/layout.tsx"
+import '@vynn/styles/globals.css';
+```
+
+## Set the theme
+
+Theme is a single `data-theme` attribute on `<html>` (or any ancestor). Nothing else changes —
+same components, same props, same markup.
+
+```tsx
+<html data-theme="classic">   {/* or "neobrutalism" */}
+```
+
+Toggle it at runtime by flipping that attribute — every component re-resolves its tokens through
+the CSS cascade, no re-render or theme-prop plumbing required.
+
+## Use a component
+
+```tsx
+import { Button } from '@vynn/ui';
+
+export function SaveButton() {
+  return <Button variant="primary">Save changes</Button>;
+}
+```
+
+Components with more than one visual part ship as compound exports — `Card.Root`, `Card.Header`,
+`Card.Title`, and so on — never as a single component taking `title`/`description` props. See
+each category page for the exact shape.

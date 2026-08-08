@@ -1,0 +1,62 @@
+---
+title: Feedback
+description: Alert, Toast.
+---
+
+## Alert
+
+Compound: `Alert.Root`, `Alert.Icon`, `Alert.Title`, `Alert.Description`. `tone`: `info` /
+`success` / `warning` / `danger`.
+
+<div className="max-w-md my-4">
+  <AlertRoot tone="danger">
+    <AlertIcon />
+    <AlertTitle>Something went wrong</AlertTitle>
+    <AlertDescription>Your changes could not be saved.</AlertDescription>
+  </AlertRoot>
+</div>
+
+```tsx
+import { Alert } from '@vynn/ui';
+
+<Alert.Root tone="danger">
+  <Alert.Icon />
+  <Alert.Title>Something went wrong</Alert.Title>
+  <Alert.Description>Your changes could not be saved.</Alert.Description>
+</Alert.Root>;
+```
+
+## Toast
+
+Base UI's toast system is **imperative**, not statically composed — you don't render a toast
+directly, you request one:
+
+```tsx
+import { Toast, useToastManager } from '@vynn/ui';
+
+function SaveButton() {
+  const toast = useToastManager();
+  return (
+    <button
+      onClick={() =>
+        toast.add({ title: 'Changes saved', type: 'success' })
+      }
+    >
+      Save
+    </button>
+  );
+}
+
+// once, near the root:
+<Toast.Provider>
+  <SaveButton />
+  <Toast.Viewport>
+    <Toast.List />
+  </Toast.Viewport>
+</Toast.Provider>;
+```
+
+`Toast.List` renders whatever `useToastManager()` currently holds with the default vynn-ui
+chrome. For custom per-toast layout, map `useToastManager().toasts` yourself and use
+`Toast.Root` / `Toast.Icon` / `Toast.Content` / `Toast.Title` / `Toast.Description` /
+`Toast.Close` directly — `Toast.Root` requires the `toast` object from the list as a prop.

@@ -1,0 +1,45 @@
+---
+title: Overlay
+description: AlertDialog, Command, ContextMenu, Dialog, Drawer, DropdownMenu, HoverCard, Menubar, Popover, Sheet, Tooltip.
+---
+
+Every component on this page wraps a Base UI compound 1:1 (`Root`, `Trigger`, `Portal`,
+`Backdrop`/`Positioner`, `Popup`/`Content`, ...) and renders through a `document.body`-level
+portal, not inline in the DOM.
+
+## Dialog, AlertDialog, Drawer, Sheet
+
+Modal variants — differ in entrance direction and semantics (`AlertDialog` uses
+`role="alertdialog"` for destructive confirmations; `Sheet`/`Drawer` slide in from an edge).
+
+```tsx
+import { Dialog, Button } from '@vynn/ui';
+
+<Dialog.Root>
+  <Dialog.Trigger render={<Button variant="primary">Edit profile</Button>} />
+  <Dialog.Portal>
+    <Dialog.Backdrop />
+    <Dialog.Content>
+      <Dialog.Title>Edit profile</Dialog.Title>
+      <Dialog.Description>Make changes to your profile here.</Dialog.Description>
+    </Dialog.Content>
+  </Dialog.Portal>
+</Dialog.Root>;
+```
+
+## DropdownMenu, ContextMenu, Menubar
+
+Click-, right-click-, and menubar-triggered menus respectively — same `Item`/`Separator`/`Group`
+vocabulary. `ContextMenu`'s right-click trigger isn't something automated testing exercises well
+headless; verify it by hand.
+
+## Popover, HoverCard, Tooltip
+
+Click-, hover-, and hover-triggered-with-a-delay popups respectively (HoverCard and Tooltip are
+both hover-based — HoverCard is for richer preview content, Tooltip for a short label). Hover
+interactions are the hardest of the three to verify in an automated pass; check them by hand too.
+
+## Command
+
+A searchable command palette — renders modally via `Command.Portal`, filters `Command.Item`s as
+you type into `Command.Input`.

@@ -1,0 +1,15 @@
+{
+  "title": "Docs",
+  "pages": [
+    "index",
+    "getting-started",
+    "---Components---",
+    "actions",
+    "data-display",
+    "feedback",
+    "forms",
+    "layout",
+    "navigation",
+    "overlay"
+  ]
+}

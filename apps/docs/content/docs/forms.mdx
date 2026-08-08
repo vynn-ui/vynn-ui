@@ -1,0 +1,47 @@
+---
+title: Forms
+description: Calendar, Checkbox, Combobox, DatePicker, Form, Input, InputOTP, Label, RadioGroup, Select, Slider, Switch, Textarea.
+---
+
+## Input
+
+Single component. Compose an icon inline via a wrapping `<div className="relative">` — see the
+`with-icon` story for the exact pattern.
+
+<div className="max-w-xs my-4">
+  <Input placeholder="you@company.com" />
+</div>
+
+## Checkbox, Switch
+
+Single components. Switch renders as `role="switch"` on a `<span>` (not a `<button>`) per Base
+UI — style it the same either way.
+
+<div className="flex items-center gap-4 my-4">
+  <Checkbox defaultChecked />
+  <Switch defaultChecked />
+</div>
+
+## Select, Combobox
+
+Both wrap Base UI 1:1 as compounds — `Root`, `Trigger`/`Input`, `Portal`, `Positioner`, `Popup`,
+`Item`. Select opens on trigger click; Combobox opens on input focus and filters as you type.
+
+## Calendar, DatePicker, InputOTP
+
+All three are fully custom builds — no matching Base UI primitive. Calendar's day cells are real
+`<button>`s (keyboard-navigable). DatePicker composes Calendar behind a Popover trigger.
+
+## RadioGroup
+
+A flat (non-compound) Base UI component — used directly, not via `RadioGroup.Root`.
+
+## Slider
+
+Renders a visually-hidden native `<input type="range">` under the hood — `aria-valuenow` /
+`min` / `max` / `step` come from that element, not a custom ARIA role.
+
+## Form, Label, Textarea
+
+Layout/labeling primitives for wiring the above into a real form. `Label` supports a `required`
+marker and associates via `htmlFor`/`id` like a normal label.

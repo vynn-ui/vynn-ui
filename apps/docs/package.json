@@ -1,0 +1,30 @@
+{
+  "name": "@vynn/docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "fumadocs-mdx"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "^16.0.0",
+    "fumadocs-ui": "^16.14.2",
+    "fumadocs-core": "^16.14.2",
+    "fumadocs-mdx": "^15.2.2",
+    "@vynn/ui": "workspace:*",
+    "@vynn/styles": "workspace:*",
+    "@vynn/tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/mdx": "^2.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.6.0"
+  }
+}

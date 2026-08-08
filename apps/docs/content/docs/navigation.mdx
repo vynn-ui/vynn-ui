@@ -1,0 +1,33 @@
+---
+title: Navigation
+description: Breadcrumb, NavigationMenu, Pagination, Sidebar, Tabs.
+---
+
+## Tabs
+
+Wraps Base UI's Tabs 1:1: `Tabs.Root`, `Tabs.List`, `Tabs.Tab`, `Tabs.Panel`. The active tab is
+keyed off Base UI's `data-active` attribute (not `data-selected` — an easy one to get wrong if
+you're styling a fork of this by hand).
+
+```tsx
+import { Tabs } from '@vynn/ui';
+
+<Tabs.Root defaultValue="overview">
+  <Tabs.List>
+    <Tabs.Tab value="overview">Overview</Tabs.Tab>
+    <Tabs.Tab value="settings">Settings</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel value="overview">Overview content.</Tabs.Panel>
+  <Tabs.Panel value="settings">Settings content.</Tabs.Panel>
+</Tabs.Root>;
+```
+
+## Breadcrumb, Pagination
+
+Straightforward compound navigation components — separators and current-page/current-item
+styling included.
+
+## NavigationMenu, Sidebar
+
+Both wrap Base UI compounds. These two have had the least interactive verification so far —
+worth exercising by hand in Storybook before relying on them in a real layout.
