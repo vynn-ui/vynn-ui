@@ -22,7 +22,7 @@ function TabsTab({ className, ...props }: React.ComponentProps<typeof BaseTabs.T
       className={cn(
         'px-4 py-2 text-sm font-semibold label-role cursor-pointer text-muted',
         'border-b-[length:var(--border-width-strong)] border-transparent -mb-[length:var(--border-width-default)]',
-        'data-[selected]:text-ink data-[selected]:border-accent',
+        'data-[active]:text-ink data-[active]:border-accent',
         'outline-none focus-visible:focus-ring-role',
         className
       )}
